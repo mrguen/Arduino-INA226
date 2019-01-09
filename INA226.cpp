@@ -295,9 +295,8 @@ int16_t INA226::readRegister16(uint8_t reg)
 
     delay(1);
 
-    Wire.beginTransmission(inaAddress);
     Wire.requestFrom(inaAddress, 2);
-    while(!Wire.available()) {};
+
     #if ARDUINO >= 100
         uint8_t vha = Wire.read();
         uint8_t vla = Wire.read();
