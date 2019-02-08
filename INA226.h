@@ -18,6 +18,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+// TG 08 feb 2019 modified all methods public to shorten the calling code 
+
 #ifndef INA226_h
 #define INA226_h
 
@@ -137,8 +139,6 @@ class INA226
 	float getMaxCurrent(void);
 	float getMaxShuntVoltage(void);
 	float getMaxPower(void);
-
-    private:
 
 	int8_t inaAddress;
 	float currentLSB, powerLSB;
